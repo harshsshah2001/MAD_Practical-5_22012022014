@@ -44,5 +44,36 @@
 
         app:layout_constraintStart_toEndOf="@+id/editTextText" />
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
+        android:text="Phone No"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextText2"
+        app:layout_constraintEnd_toStartOf="@+id/editTextText2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name"
+        app:layout_constraintEnd_toStartOf="@+id/Btn_Browse2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+
+    <Button
+        android:id="@+id/Btn_Browse2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:text="Call"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Btn_Browse" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

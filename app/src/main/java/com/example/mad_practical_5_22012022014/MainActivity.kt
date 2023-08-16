@@ -13,6 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         val browseButton:Button=findViewById(R.id.Btn_Browse)
         val editTextBrowser:EditText=findViewById(R.id.editTextText)
+
         browseButton.setOnClickListener {
             OpenUrl(editTextBrowser.text.toString())
         }
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         Intent(Intent.ACTION_VIEW, Uri.parse(url)).also { startActivity(it) }
     }
     fun Call(phone:String){
-
+        Intent(Intent.ACTION_DIAL).setData(Uri.parse("tel:$phone")).also { startActivity((it))}
     }
     fun CallLog(){
 
