@@ -12,10 +12,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val browseButton:Button=findViewById(R.id.Btn_Browse)
+        val browseButton2:Button=findViewById(R.id.Btn_Browse2)
+        val browseButton3:Button=findViewById(R.id.Btn_Browse3)
+        val browseButton4:Button=findViewById(R.id.Btn_Browse4)
+        val browseButton5:Button=findViewById(R.id.Btn_Browse5)
+        val browseButton6:Button=findViewById(R.id.Btn_Browse6)
         val editTextBrowser:EditText=findViewById(R.id.editTextText)
 
         browseButton.setOnClickListener {
             OpenUrl(editTextBrowser.text.toString())
+        }
+        browseButton4.setOnClickListener {
+            CallLog()
         }
     }
     fun OpenUrl(url:String){
@@ -28,7 +36,7 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun Gallery(){
-
+        Intent(Intent.CATEGORY_APP_GALLERY).also { startActivity(it) }
     }
     fun Cemera(){
 
